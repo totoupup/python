@@ -2,6 +2,7 @@ from turtle import *
 pensize(5)
 pencolor('black')
 speed(10)
+#github
 
 ##鱼头
 #鱼头轮廓:右开口抛物线公式x=(y**2)/2px
