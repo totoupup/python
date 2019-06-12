@@ -13,8 +13,9 @@ class ModifyConfigPath(wx.Frame):
         path_text = wx.TextCtrl(frame, pos=(5, 5), size=(260, 24))
         open_button = wx.Button(frame, label="打开", pos=(270, 5), size=(50, 24))
         save_button = wx.Button(frame, label="保存", pos=(330, 5), size=(50, 24))
+        # wx.TE_MULTILINE多行显示
         content_text = wx.TextCtrl(frame, pos=(5, 35), size=(375, 320),
-                               style=wx.TE_MULTILINE)  # wx.TE_MULTILINE可以实现换行功能
+                               style=wx.TE_MULTILINE)
 
         def openfile(event):  # 参数必须为event，其他参数如何添加？
             filesFilter = "Txt (*.txt)|*.txt|All files (*.*)|*.*"  # 文件格式过滤器
@@ -25,7 +26,7 @@ class ModifyConfigPath(wx.Frame):
             path = fileDialog.GetPath()
             path_text.SetValue(path)
             path = path_text.GetValue()
-            with open(path, 'r', encoding='utf-8') as f:
+            with open(path, 'r', encoding='default') as f:
                 content_text.SetValue(f.read())
         open_button.Bind(wx.EVT_BUTTON, openfile)
         frame.Show()
