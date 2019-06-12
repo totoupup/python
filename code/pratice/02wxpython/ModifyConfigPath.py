@@ -13,10 +13,10 @@ class ModifyConfigPath(wx.Frame):
         open_button = wx.Button(frame, label="打开", pos=(270, 5), size=(50, 24))
         save_button = wx.Button(frame, label="保存", pos=(330, 5), size=(50, 24))
         content_text = wx.TextCtrl(frame, pos=(5, 35), size=(375, 320),
-                               style=wx.TE_MULTILINE)  # wx.TE_MULTILINE可以实现换行功能,若不加此功能文本文档显示为一行显示
+                               style=wx.TE_MULTILINE)  # wx.TE_MULTILINE可以实现换行功能
 
-        def openfile(event):  # 参数必须为event
-            filesFilter = "Txt (*.txt)|*.txt|" "All files (*.*)|*.*"
+        def openfile(event):  # 参数必须为event，其他参数如何添加？
+            filesFilter = "Txt (*.txt)|*.txt|All files (*.*)|*.*"  # 文件格式过滤器
             fileDialog = wx.FileDialog(None, defaultDir='E:\\code\\00test\\Python\\Basic\\VisitBolg', message="选择单个文件", wildcard=filesFilter, style=wx.FD_OPEN)
             dialogResult = fileDialog.ShowModal()
             if dialogResult != wx.ID_OK:
