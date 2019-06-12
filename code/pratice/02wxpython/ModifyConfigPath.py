@@ -1,6 +1,9 @@
 # encoding:utf-8
 import wx
-#设置project structure -- proejct SDK  会在misc.xml中生成component
+
+
+# 直接用idea打开会提示“no module named XX”，1.设置project structure -- proejct SDK  会在misc.xml中生成component
+# 2. add configuration 选择start script和sdk
 # 参考 https://www.cnblogs.com/morries123/p/8568666.html
 
 class ModifyConfigPath(wx.Frame):
