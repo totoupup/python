@@ -1,6 +1,6 @@
 # encoding:utf-8
 import wx
-#如果提示no module named XXX,可以尝试重新导入
+#如果提示no module named XXX,可以尝试重新导入，add configuration里面设置
 #设置project structure -- proejct SDK  会在misc.xml中生成component
 # 参考 https://www.cnblogs.com/morries123/p/8568666.html
 
