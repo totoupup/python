@@ -1,6 +1,8 @@
 # encoding:utf-8
 import wx
-#设置project structure -- proejct SDK  会在misc.xml中生成component
+
+
+# 设置project structure -- proejct SDK ，会在misc.xml中生成component
 # 参考 https://www.cnblogs.com/morries123/p/8568666.html
 
 class ModifyConfigPath(wx.Frame):
@@ -13,7 +15,7 @@ class ModifyConfigPath(wx.Frame):
         content_text = wx.TextCtrl(frame, pos=(5, 35), size=(375, 320),
                                style=wx.TE_MULTILINE)  # wx.TE_MULTILINE可以实现换行功能,若不加此功能文本文档显示为一行显示
 
-        def openfile(event): #参数必须为event
+        def openfile(event):  # 参数必须为event
             filesFilter = "Txt (*.txt)|*.txt|" "All files (*.*)|*.*"
             fileDialog = wx.FileDialog(None, defaultDir='E:\\code\\00test\\Python\\Basic\\VisitBolg', message="选择单个文件", wildcard=filesFilter, style=wx.FD_OPEN)
             dialogResult = fileDialog.ShowModal()
